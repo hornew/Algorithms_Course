@@ -1,62 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace MergeSort
 {
     class MergeSortLab
     {
-        public List<double> array { get; set; }
+        public List<double> Array { get; set; }
 
         public MergeSortLab(List<double> X)
         {
-            array = MergeSort(X);
-
-        }
-        public MergeSortLab(List<double> X, List<double> Y)
-        {
-            array = Merge(X, Y);
-        }//
-        public MergeSortLab(int n)
-        {
-            Random r = new Random();
-            array = new List<double>(n);
-
-            for (int i = 0; i < array.Count; i++)
-            {
-                array.Add(r.Next(n));
-            }
+            Array = MergeSort(X);
         }//constructor
 
+        /// <summary>
+        /// Recursively splits the List and then calls Merge function to merge the Lists back into a single List
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns></returns>
         public List<double> MergeSort(List<double> array)
         {
-            int middle = array.Count / 2;
+            int middle = array.Count >> 1;
             List<double> A;
             List<double> B;
 
-            if (array.Count == 1)
+            if (array.Count == 1)   //base case
             {
                 return array;
             }
 
-            A = MergeSort(array.Take<double>(middle).ToList());
-            B = MergeSort(array.Skip<double>(middle).ToList());
+            A = MergeSort(array.Take(middle).ToList()); //linq expressions used to split the list in half
+            B = MergeSort(array.Skip(middle).ToList());
 
             return Merge(A, B);
         } //MergeSort
 
-        //Merge 2 sorted lists together in sorted order
+        /// <summary>
+        /// Merge 2 sorted lists together in sorted order
+        /// </summary>
+        /// <param name="A"></param>
+        /// <param name="B"></param>
+        /// <returns></returns>
         public List<double> Merge(List<double> A, List<double> B)
         {
-            List<double> C = new List<double>(A.Count * 2 + 1); //List that will be returned
+            List<double> C = new List<double>(A.Count << 1 + 1); //List that will be returned
 
             int i; //iterator for List A
             int j; //iterator for List B
 
-            for (i = 0, j = 0; i < A.Count && j < B.Count; )
+            for (i = 0, j = 0; i < A.Count && j < B.Count; )  //Merge the lists until one list runs out of elements
             {
-                if (A[i] < B[j])
+                if (A[i] < B[j]) //smaller element added to list C first
                 {
                     C.Add(A[i]);
                     i++;
@@ -87,4 +80,5 @@ namespace MergeSort
         }//Merge
 
     }//class
-}
+
+}//namespace
