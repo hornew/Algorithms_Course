@@ -1,0 +1,7 @@
+\\etsulab1\users\hornew\my documents\visual studio 2010\Projects\Horne_Matrix_Lab\Horne_Matrix_Lab\bin\Debug\Horne_Matrix_Lab.exe
+\\etsulab1\users\hornew\my documents\visual studio 2010\Projects\Horne_Matrix_Lab\Horne_Matrix_Lab\bin\Debug\Horne_Matrix_Lab.pdb
+\\etsulab1\users\hornew\my documents\visual studio 2010\Projects\Horne_Matrix_Lab\Horne_Matrix_Lab\obj\x86\Debug\ResolveAssemblyReference.cache
+\\etsulab1\users\hornew\my documents\visual studio 2010\Projects\Horne_Matrix_Lab\Horne_Matrix_Lab\obj\x86\Debug\Horne_Matrix_Lab.exe
+\\etsulab1\users\hornew\my documents\visual studio 2010\Projects\Horne_Matrix_Lab\Horne_Matrix_Lab\obj\x86\Debug\Horne_Matrix_Lab.pdb
+C:\Users\Austin\Documents\Visual Studio 2010\Projects\Horne_Matrix_Lab\Horne_Matrix_Lab\obj\x86\Debug\Horne_Matrix_Lab.exe
+C:\Users\Austin\Documents\Visual Studio 2010\Projects\Horne_Matrix_Lab\Horne_Matrix_Lab\obj\x86\Debug\Horne_Matrix_Lab.pdb
